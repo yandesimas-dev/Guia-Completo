@@ -79,8 +79,15 @@
       radial-gradient(700px 400px at 5% 30%, rgba(29,185,84,.08), transparent 60%),
       var(--bg);
   }
-  .hero-grid{display:grid;grid-template-columns:1fr;gap:44px;align-items:center;position:relative;z-index:2}
-  @media(min-width:940px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+  .hero-grid{display:grid;grid-template-columns:1fr;grid-template-areas:"title" "media" "cta" "list";gap:26px;position:relative;z-index:2}
+  .hero-title{grid-area:title;margin:0}
+  .hero .cta-row{grid-area:cta}
+  .hero .checklist{grid-area:list;margin:0}
+  .hero-visual{grid-area:media}
+  @media(min-width:940px){
+    .hero-grid{grid-template-columns:1.05fr .95fr;grid-template-areas:"title media" "cta media" "list media";column-gap:44px;row-gap:22px;align-items:start}
+    .hero-visual{align-self:center}
+  }
   .hero h1{font-size:clamp(2.15rem,5vw,3.5rem);font-weight:800}
   .hero h1 .green{display:inline}
   .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.28rem);color:var(--muted);margin:22px 0 30px;max-width:560px}
@@ -259,18 +266,16 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap hero-grid">
-    <div>
-      <h1>Destrave seu inglês: <span class="green">confiança, vocabulário e pronúncia.</span></h1>
-      <div class="cta-row" style="margin-top:30px">
-        <a href="https://pay.kiwify.com.br/Vfm4mSq" class="btn">Quero destravar meu inglês →</a>
-        <span class="btn-note">Acesso imediato • híbrido • no seu ritmo</span>
-      </div>
-      <ul class="checklist">
-        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Foco na fala desde a primeira aula.</li>
-        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Método internacional.</li>
-        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Planejamento completo de estudos de segunda a domingo.</li>
-      </ul>
+    <h1 class="hero-title">Destrave seu inglês: <span class="green">confiança, vocabulário e pronúncia.</span></h1>
+    <div class="cta-row">
+      <a href="https://pay.kiwify.com.br/Vfm4mSq" class="btn">Quero destravar meu inglês →</a>
+      <span class="btn-note">Acesso imediato • híbrido • no seu ritmo</span>
     </div>
+    <ul class="checklist">
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Foco na fala desde a primeira aula.</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Método internacional.</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Planejamento completo de estudos de segunda a domingo.</li>
+    </ul>
     <div class="hero-visual">
       <div class="hero-photo">
         <!-- Salve a imagem do mockup na MESMA pasta deste HTML. A página tenta estes nomes automaticamente. -->
