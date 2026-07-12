@@ -79,7 +79,11 @@
       radial-gradient(700px 400px at 5% 30%, rgba(29,185,84,.08), transparent 60%),
       var(--bg);
   }
-  @media(max-width:939px){.hero{padding-top:22px}}
+  @media(max-width:939px){
+    .hero{padding-top:22px}
+    .hero .hero-title{text-align:center}
+    .hero .hero-title .green{display:block;white-space:nowrap;font-size:4.3vw;margin-top:8px}
+  }
   .hero-grid{display:grid;grid-template-columns:1fr;grid-template-areas:"title" "media" "cta" "list";gap:26px;position:relative;z-index:2}
   .hero-title{grid-area:title;margin:0}
   .hero .cta-row{grid-area:cta}
