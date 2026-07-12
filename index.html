@@ -79,6 +79,13 @@
       radial-gradient(700px 400px at 5% 30%, rgba(29,185,84,.08), transparent 60%),
       var(--bg);
   }
+  @media(max-width:939px){.hero{padding-top:22px}}
+  .scroll-cue{display:flex;flex-direction:column;align-items:center;gap:6px;
+    margin:30px auto 0;color:var(--muted);font-size:.72rem;letter-spacing:.18em;
+    text-transform:uppercase;font-weight:600;text-decoration:none;
+    animation:bob 1.8s ease-in-out infinite}
+  .scroll-cue svg{stroke:var(--green-2)}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
   .hero-grid{display:grid;grid-template-columns:1fr;grid-template-areas:"title" "media" "cta" "list";gap:26px;position:relative;z-index:2}
   .hero-title{grid-area:title;margin:0}
   .hero .cta-row{grid-area:cta}
@@ -289,6 +296,10 @@
       </div>
     </div>
   </div>
+  <a href="#modulos" class="scroll-cue" aria-label="Ver mais conteúdo">
+    role para ver mais
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+  </a>
 </section>
 
 <!-- PAIN -->
