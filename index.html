@@ -73,19 +73,13 @@
   .glow{position:absolute;border-radius:50%;filter:blur(90px);opacity:.5;pointer-events:none;z-index:0}
 
   /* Hero */
-  .hero{position:relative;overflow:hidden;padding:78px 0 40px;
+  .hero{position:relative;overflow:hidden;padding:78px 0 22px;
     background:
       radial-gradient(1000px 500px at 78% -10%, rgba(29,185,84,.18), transparent 60%),
       radial-gradient(700px 400px at 5% 30%, rgba(29,185,84,.08), transparent 60%),
       var(--bg);
   }
   @media(max-width:939px){.hero{padding-top:22px}}
-  .scroll-cue{display:flex;flex-direction:column;align-items:center;gap:6px;
-    margin:30px auto 0;color:var(--muted);font-size:.72rem;letter-spacing:.18em;
-    text-transform:uppercase;font-weight:600;text-decoration:none;
-    animation:bob 1.8s ease-in-out infinite}
-  .scroll-cue svg{stroke:var(--green-2)}
-  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
   .hero-grid{display:grid;grid-template-columns:1fr;grid-template-areas:"title" "media" "cta" "list";gap:26px;position:relative;z-index:2}
   .hero-title{grid-area:title;margin:0}
   .hero .cta-row{grid-area:cta}
@@ -96,9 +90,11 @@
     .hero-visual{align-self:center}
   }
   .hero h1{font-size:clamp(2.15rem,5vw,3.5rem);font-weight:800}
-  .hero h1 .green{display:inline}
+  .hero h1 .green{display:inline;font-size:.78em}
   .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.28rem);color:var(--muted);margin:22px 0 30px;max-width:560px}
-  .hero .cta-row{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+  .hero .cta-row{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .hero .cta-row .btn{align-self:center;text-align:center}
+  @media(min-width:940px){.hero .cta-row{align-items:flex-start}.hero .cta-row .btn{align-self:flex-start}}
   .checklist{list-style:none;margin:30px 0 0;display:grid;gap:12px}
   .checklist li{display:flex;gap:12px;align-items:flex-start;color:var(--text);font-size:1rem}
   .checklist svg{flex:0 0 auto;margin-top:3px}
@@ -296,14 +292,10 @@
       </div>
     </div>
   </div>
-  <a href="#modulos" class="scroll-cue" aria-label="Ver mais conteúdo">
-    role para ver mais
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-  </a>
 </section>
 
 <!-- PAIN -->
-<section class="block" style="padding:36px 0 40px">
+<section class="block" style="padding:18px 0 40px">
   <div class="wrap">
     <div class="center">
       <h2>Inglês não é complicado, você só precisa de um método que realmente funcione</h2>
