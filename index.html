@@ -469,9 +469,6 @@ body{padding-top:46px !important}
 .sc-head .avstack{display:flex;justify-content:center;margin:14px auto 10px;vertical-align:baseline}
 
 /* ===== subtitulo + indicador de arrastar da vitrine ===== */
-.sc-sublabel{display:block;text-align:center;margin-top:16px;
-  font-family:'Sora',sans-serif;font-size:.78rem;font-weight:700;
-  letter-spacing:.22em;text-transform:uppercase;color:var(--green-2)}
 .sc-swipe{display:flex !important;align-items:center;justify-content:center;gap:9px;
   margin:2px auto 0;padding:9px 18px;width:max-content;
   border:1px solid var(--border);border-radius:999px;background:var(--panel);
@@ -487,6 +484,41 @@ body{padding-top:46px !important}
 .sc-rail{scroll-padding-left:22px}
 @media(min-width:1080px){.sc-swipe{display:none !important}}
 @media(prefers-reduced-motion:reduce){.sc-swipe i{animation:none;opacity:.9}}
+
+/* ===== deixar claro que ha mais conteudo abaixo ===== */
+/* 1. topo mais compacto no celular, pra proxima secao aparecer na dobra */
+@media(max-width:939px){
+  .hero{padding-top:20px !important;padding-bottom:0 !important}
+  .hero-grid{gap:16px !important}
+  .hero .checklist{padding:16px 18px;gap:11px}
+  .hero .checklist li{font-size:.98rem}
+  .hero .cta-row .btn{padding:15px 26px}
+  .hero .cta-row .btn-note{display:none}
+  .price-tag{margin:0 0 10px}
+}
+/* 2. seta fixa no rodape da tela enquanto a pessoa esta no topo */
+.scrolldown{position:fixed !important;left:50%;transform:translateX(-50%);
+  bottom:12px;z-index:110;margin:0 !important;padding:10px 26px 8px;
+  border-radius:999px;background:rgba(5,10,7,.72);backdrop-filter:blur(8px);
+  border:1px solid var(--border)}
+.scrolldown.hide{opacity:0;transform:translateX(-50%) translateY(8px)}
+.chevs i{width:18px;height:18px;border-width:3px;margin-top:-8px}
+@media(max-width:420px){
+  .scrolldown{bottom:10px;padding:8px 20px 6px}
+  .chevs i{width:15px;height:15px}
+}
+/* 3. degrade no fim do topo, insinuando continuacao */
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;
+  background:linear-gradient(to bottom,transparent,rgba(5,10,7,.75));pointer-events:none;z-index:1}
+
+/* headline centralizada */
+.hero .hero-title,.hero-title{text-align:center !important;margin-left:auto;margin-right:auto}
+@media(min-width:940px){
+  .hero-title{max-width:16ch}
+  .hero .cta-row{align-items:center}
+  .hero .cta-row .btn{align-self:center}
+  .hero .price-tag{text-align:center}
+}
 </style>
 </head>
 <body>
@@ -576,7 +608,6 @@ body{padding-top:46px !important}
         <img src="modulo-6.webp" alt="Módulo 6 — Inglês para Viagens" loading="lazy" width="520" height="806" decoding="async">
       </div>
     </div>
-    <span class="sc-sublabel">os 6 módulos</span>
     <span class="sc-swipe">arraste para o lado <i></i><i></i><i></i></span>
 
     <p class="sc-sub">Com o Yan aprenderam a se comunicar com mais confiança
@@ -811,7 +842,7 @@ body{padding-top:46px !important}
 (function(){
   var el=document.getElementById('scrollDown');
   if(!el)return;
-  var hide=function(){ if(window.scrollY>160){el.classList.add('hide');}else{el.classList.remove('hide');} };
+  var hide=function(){ if(window.scrollY>90){el.classList.add('hide');}else{el.classList.remove('hide');} };
   window.addEventListener('scroll',hide,{passive:true}); hide();
 })();
 </script>
