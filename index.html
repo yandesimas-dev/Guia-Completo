@@ -451,6 +451,42 @@ header{top:52px}
 @media(max-width:939px){
   .hero .hero-title{font-size:clamp(1.65rem,7.4vw,2.3rem) !important;max-width:none}
 }
+
+/* ===== barra fixa: uma linha so, sem header embaixo ===== */
+body > header{display:none !important}
+body{padding-top:46px !important}
+.topbar{flex-wrap:nowrap !important;gap:12px !important;padding:9px 14px !important}
+.topbar span{white-space:nowrap;font-size:clamp(.68rem,3.2vw,1rem) !important}
+.topbar a{white-space:nowrap;font-size:clamp(.66rem,3vw,.86rem) !important;
+  padding:8px 16px !important}
+@media(max-width:400px){
+  .topbar{gap:8px !important;padding:8px 10px !important}
+  .topbar a{padding:7px 13px !important}
+}
+
+/* titulo da vitrine em 3 linhas: texto / fotos / texto */
+.sc-head h2 .l1,.sc-head h2 .l2{display:block}
+.sc-head .avstack{display:flex;justify-content:center;margin:14px auto 10px;vertical-align:baseline}
+
+/* ===== subtitulo + indicador de arrastar da vitrine ===== */
+.sc-sublabel{display:block;text-align:center;margin-top:16px;
+  font-family:'Sora',sans-serif;font-size:.78rem;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--green-2)}
+.sc-swipe{display:flex !important;align-items:center;justify-content:center;gap:9px;
+  margin:2px auto 0;padding:9px 18px;width:max-content;
+  border:1px solid var(--border);border-radius:999px;background:var(--panel);
+  font-family:'Sora',sans-serif;font-size:.82rem;font-weight:700;color:var(--text)}
+.sc-swipe i{display:block;width:11px;height:11px;border-right:2.5px solid var(--green-2);
+  border-top:2.5px solid var(--green-2);transform:rotate(45deg);border-radius:2px;
+  animation:swipeX 1.5s cubic-bezier(.25,.6,.3,1) infinite;opacity:0;margin-left:-6px}
+.sc-swipe i:nth-of-type(1){animation-delay:0s}
+.sc-swipe i:nth-of-type(2){animation-delay:.2s}
+.sc-swipe i:nth-of-type(3){animation-delay:.4s}
+@keyframes swipeX{0%{opacity:0;transform:rotate(45deg) translate(-4px,4px)}
+  45%{opacity:1}100%{opacity:0;transform:rotate(45deg) translate(4px,-4px)}}
+.sc-rail{scroll-padding-left:22px}
+@media(min-width:1080px){.sc-swipe{display:none !important}}
+@media(prefers-reduced-motion:reduce){.sc-swipe i{animation:none;opacity:.9}}
 </style>
 </head>
 <body>
@@ -458,7 +494,7 @@ header{top:52px}
 <!-- BARRA FIXA -->
 <div class="topbar">
   <span>COMECE A FALAR INGLÊS <u>HOJE MESMO</u></span>
-  <a href="https://pay.kiwify.com.br/Vfm4mSq">COMPRAR AGORA</a>
+  <a href="https://pay.kiwify.com.br/Vfm4mSq">COMPRAR</a>
 </div>
 
 <!-- WHATSAPP FLUTUANTE — troque 5548996166896 pelo seu (ex: 5548999999999) -->
@@ -486,7 +522,7 @@ header{top:52px}
     <ul class="checklist">
       <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Aulas ao vivo toda semana</li>
       <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Aulas gravadas (+50 horas)</li>
-      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Simulação de situações do dia a dia</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Simulações reais do dia a dia</li>
       <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Cronograma de estudos</li>
       <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Comunidade e suporte 24h</li>
     </ul>
@@ -503,7 +539,7 @@ header{top:52px}
 <section class="showcase" id="vitrine">
   <div class="wrap">
     <div class="sc-head">
-      <h2>Centenas de alunos já provaram
+      <h2><span class="l1">Centenas de alunos já provaram</span>
         <span class="avstack">
           <!-- Fotos reais de alunos (com autorizacao): aluno-1.webp ... aluno-4.webp -->
           <span><img src="aluno-1.webp" width="120" height="120" decoding="async" alt="Aluno do Guia Completo de Inglês" onerror="this.remove()"></span>
@@ -511,7 +547,7 @@ header{top:52px}
           <span><img src="aluno-3.webp" width="120" height="120" decoding="async" alt="Aluno do Guia Completo de Inglês" onerror="this.remove()"></span>
           <span><img src="aluno-4.webp" width="120" height="120" decoding="async" alt="Aluno do Guia Completo de Inglês" onerror="this.remove()"></span>
         </span>
-        que SIM, eles conseguem aprender inglês.</h2>
+        <span class="l2">que SIM, eles conseguem aprender inglês.</span></h2>
     </div>
 
     <div class="sc-rail">
@@ -540,7 +576,8 @@ header{top:52px}
         <img src="modulo-6.webp" alt="Módulo 6 — Inglês para Viagens" loading="lazy" width="520" height="806" decoding="async">
       </div>
     </div>
-    <span class="sc-swipe">arraste para o lado →</span>
+    <span class="sc-sublabel">os 6 módulos</span>
+    <span class="sc-swipe">arraste para o lado <i></i><i></i><i></i></span>
 
     <p class="sc-sub">Com o Yan aprenderam a se comunicar com mais confiança
     na vida pessoal, acadêmica, profissional…</p>
