@@ -25,6 +25,17 @@
 <meta name="twitter:title" content="Guia Completo de Inglês — Teacher Yan Simas" />
 <meta name="twitter:description" content="Aulas ao vivo, pronúncia e simulações reais do dia a dia. 12x R$ 6,93 ou R$ 67 à vista." />
 <meta name="twitter:image" content="https://curso.letztalk.com.br/share.jpg" />
+
+<!-- ===== VTurb: otimizacao de carregamento do player ===== -->
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/b6b3a284-e9f3-4b13-825a-d57f292bdf11/players/6a74aa86769f2a9d869a4887/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/b6b3a284-e9f3-4b13-825a-d57f292bdf11/6a74aa7da2823ff8d8e7efe7/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -571,6 +582,20 @@ body{padding-top:46px !important}
   #bonus{padding-bottom:28px !important}
   .block + .block{padding-top:30px}
 }
+
+/* ===== VSL ===== */
+.vsl{padding:20px 0 30px;background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+.vsl-box{max-width:760px;margin:26px auto 0}
+.vsl-frame{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--border);
+  background:#000;box-shadow:0 18px 60px rgba(0,0,0,.55);line-height:0}
+.vsl-frame vturb-smartplayer{display:block;width:100%}
+.vsl-frame iframe,.vsl-frame video{width:100%;display:block;border:0;aspect-ratio:16/9}
+@media(max-width:939px){.vsl{padding:14px 0 22px}.vsl-box{margin-top:20px}}
+
+/* headline da VSL */
+.vsl-h{font-size:clamp(1.7rem,3.5vw,2.5rem);font-weight:800;line-height:1.2;color:var(--white)}
+.vsl-p{color:var(--muted);margin-top:12px;font-size:.98rem}
+@media(max-width:939px){.vsl-h{font-size:clamp(1.5rem,6vw,2rem)}}
 </style>
 </head>
 <body>
@@ -615,9 +640,36 @@ body{padding-top:46px !important}
 </section>
 
 <!-- INDICADOR DE ROLAGEM -->
-<a class="scrolldown" id="scrollDown" href="#vitrine" aria-label="Ver mais conteúdo">
+<a class="scrolldown" id="scrollDown" href="#video" aria-label="Ver mais conteúdo">
   <span class="chevs" aria-hidden="true"><i></i><i></i><i></i></span>
 </a>
+
+<!-- ================= VSL ================= -->
+<section class="vsl" id="video">
+  <div class="wrap">
+    <div class="center">
+      
+      <h2 class="vsl-h">E se aprender inglês fosse parte da sua rotina?</h2>
+      <p class="vsl-p">Dê o play e entenda como o inglês pode se encaixar na sua vida.</p>
+    </div>
+
+    <div class="vsl-box">
+      <div class="vsl-frame">
+        <vturb-smartplayer id="vid-6a74aa86769f2a9d869a4887" style="display:block;margin:0 auto;width:100%"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:56.25% 0 0;z-index:0;background-color:black"></div></vturb-smartplayer>
+        <script type="text/javascript">
+          var s=document.createElement("script");
+          s.src="https://scripts.converteai.net/b6b3a284-e9f3-4b13-825a-d57f292bdf11/players/6a74aa86769f2a9d869a4887/v4/player.js",
+          s.async=!0,document.head.appendChild(s);
+        </script>
+      </div>
+
+      <div class="center" style="margin-top:26px">
+        <a href="https://pay.kiwify.com.br/Vfm4mSq" class="btn">Comprar agora →</a>
+        <span class="btn-note">Acesso imediato e vitalício • 12x R$ 6,93 ou R$ 67 à vista</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- VITRINE DE MODULOS -->
 <section class="showcase" id="vitrine">
