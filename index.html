@@ -597,6 +597,29 @@ body{padding-top:46px !important}
 .vsl-p{color:var(--muted);margin-top:12px;font-size:.98rem}
 @media(max-width:939px){.vsl-h{font-size:clamp(1.5rem,6vw,2rem)}}
 </style>
+
+<!-- ==================== META PIXEL ====================
+     Pixel ID configurado: 625143213958251
+     PageView dispara em toda visita.
+     InitiateCheckout dispara no clique dos botoes de compra
+     (script no final do arquivo, antes de </body>).
+     ==================================================== -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '625143213958251');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=625143213958251&ev=PageView&noscript=1"/></noscript>
+<!-- ================== FIM META PIXEL ================== -->
+
 </head>
 <body>
 
@@ -950,5 +973,18 @@ body{padding-top:46px !important}
   window.addEventListener('scroll',hide,{passive:true}); hide();
 })();
 </script>
+
+<!-- ===== Pixel: dispara InitiateCheckout ao clicar em qualquer botao de compra ===== -->
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href*="pay.kiwify.com.br"]');
+    if(a && typeof fbq === 'function'){
+      fbq('track', 'InitiateCheckout', {content_name: 'Guia Completo de Ingles', value: 67, currency: 'BRL'});
+    }
+  }, true);
+})();
+</script>
+
 </body>
 </html>
