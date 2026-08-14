@@ -601,8 +601,9 @@ body{padding-top:46px !important}
 <!-- ==================== META PIXEL ====================
      Pixel ID configurado: 625143213958251
      PageView dispara em toda visita.
-     InitiateCheckout dispara no clique dos botoes de compra
-     (script no final do arquivo, antes de </body>).
+     O InitiateCheckout e o Purchase vem da Kiwify, nao daqui —
+     nao adicione um evento de clique nesta pagina para nao
+     duplicar a contagem.
      ==================================================== -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -642,31 +643,6 @@ src="https://www.facebook.com/tr?id=625143213958251&ev=PageView&noscript=1"/></n
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <h1 class="hero-title">Conheça o método mais fácil, rápido e divertido para <span class="hl">falar inglês</span> <em>desde o 1º dia</em></h1>
-    <div class="cta-row">
-      <span class="price-tag"><b>12x R$ 6,93</b><small>ou R$ 67 à vista • acesso vitalício</small></span>
-      <a href="https://pay.kiwify.com.br/Vfm4mSq" class="btn">Comprar agora →</a>
-      <span class="btn-note">Acesso imediato e vitalício • 12x R$ 6,93 ou R$ 67 à vista</span>
-    </div>
-    <ul class="checklist">
-      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Aulas ao vivo toda semana</li>
-      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Mais de 50 aulas gravadas</li>
-      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Simulações reais do dia a dia</li>
-      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Cronograma de estudos</li>
-      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Comunidade e suporte 24h</li>
-    </ul>
-    
-  </div>
-</section>
-
-<!-- INDICADOR DE ROLAGEM -->
-<a class="scrolldown" id="scrollDown" href="#video" aria-label="Ver mais conteúdo">
-  <span class="chevs" aria-hidden="true"><i></i><i></i><i></i></span>
-</a>
-
 <!-- ================= VSL ================= -->
 <section class="vsl" id="video">
   <div class="wrap">
@@ -693,6 +669,31 @@ src="https://www.facebook.com/tr?id=625143213958251&ev=PageView&noscript=1"/></n
     </div>
   </div>
 </section>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <h1 class="hero-title">Conheça o método mais fácil, rápido e divertido para <span class="hl">falar inglês</span> <em>desde o 1º dia</em></h1>
+    <div class="cta-row">
+      <span class="price-tag"><b>12x R$ 6,93</b><small>ou R$ 67 à vista • acesso vitalício</small></span>
+      <a href="https://pay.kiwify.com.br/Vfm4mSq" class="btn">Comprar agora →</a>
+      <span class="btn-note">Acesso imediato e vitalício • 12x R$ 6,93 ou R$ 67 à vista</span>
+    </div>
+    <ul class="checklist">
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Aulas ao vivo toda semana</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Mais de 50 aulas gravadas</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Simulações reais do dia a dia</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Cronograma de estudos</li>
+      <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" fill="#12351f"/><path d="M7 12.5l3 3 7-7" stroke="#25e06a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Comunidade e suporte 24h</li>
+    </ul>
+    
+  </div>
+</section>
+
+<!-- INDICADOR DE ROLAGEM -->
+<a class="scrolldown" id="scrollDown" href="#vitrine" aria-label="Ver mais conteúdo">
+  <span class="chevs" aria-hidden="true"><i></i><i></i><i></i></span>
+</a>
 
 <!-- VITRINE DE MODULOS -->
 <section class="showcase" id="vitrine">
@@ -974,17 +975,6 @@ src="https://www.facebook.com/tr?id=625143213958251&ev=PageView&noscript=1"/></n
 })();
 </script>
 
-<!-- ===== Pixel: dispara InitiateCheckout ao clicar em qualquer botao de compra ===== -->
-<script>
-(function(){
-  document.addEventListener('click', function(e){
-    var a = e.target.closest && e.target.closest('a[href*="pay.kiwify.com.br"]');
-    if(a && typeof fbq === 'function'){
-      fbq('track', 'InitiateCheckout', {content_name: 'Guia Completo de Ingles', value: 67, currency: 'BRL'});
-    }
-  }, true);
-})();
-</script>
 
 </body>
 </html>
